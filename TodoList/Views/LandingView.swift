@@ -26,7 +26,7 @@ struct LandingView: View {
             
             VStack {
                 
-                List($todos) { $todo in
+                List($viewModel.todos) { $todo in
                     
                     ItemView(currentItem: $todo)
                         // Delete item
@@ -35,7 +35,7 @@ struct LandingView: View {
                                 "Delete",
                                 role: .destructive,
                                 action: {
-                                    delete(todo)
+                                    viewModel.delete(todo)
                                 }
                             )
                         }
@@ -48,7 +48,7 @@ struct LandingView: View {
                     
                     Button("ADD") {
                         // Add the new to-do item
-                        createToDo(withTitle: newItemDescription)
+                        viewModel.createToDo(withTitle: newItemDescription)
                     }
                     .font(.caption)
                 }
