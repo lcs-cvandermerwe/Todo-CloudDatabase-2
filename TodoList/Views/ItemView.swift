@@ -15,6 +15,9 @@ struct ItemView: View {
         Label(
             title: {
                 TextField("", text: $currentItem.title, axis: .vertical)
+                    .onSubmit {
+                        viewModel.update(todo: currentItem)
+                    }
             }, icon: {
                 Image(systemName: currentItem.done == true ? "checkmark.circle" : "circle")
                     // Tap to mark as done
