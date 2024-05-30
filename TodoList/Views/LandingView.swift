@@ -20,6 +20,8 @@ struct LandingView: View {
     // The view model
     @State var viewModel = TodoListViewModel()
     
+    // is the sheet to add a new to do item showing right now?
+    @State var presentingNewItemSheet = false
     // MARK: Computed properties
     var body: some View {
         NavigationView {
@@ -29,7 +31,7 @@ struct LandingView: View {
                 List($viewModel.todos) { $todo in
                     
                     ItemView(currentItem: $todo, viewModel: viewModel)
-                        // Delete item
+                    // Delete item
                         .swipeActions {
                             Button(
                                 "Delete",
@@ -47,7 +49,7 @@ struct LandingView: View {
                         try await viewModel.filterTodos(on: searchText)
                     }
                 }
-
+                
                 
                 HStack {
                     TextField("Enter a to-do item", text: $newItemDescription)
@@ -70,7 +72,7 @@ struct LandingView: View {
         .environment(viewModel)
     }
     
-   
+    
 }
 
 #Preview {
