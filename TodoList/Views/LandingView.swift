@@ -55,9 +55,11 @@ struct LandingView: View {
                     Button("ADD") {
                         // Add the new to-do item
                         viewModel.createToDo(withTitle: newItemDescription)
+                        // Clear the stored property bound to the input textfield
                         newItemDescription = ""
                     }
                     .font(.caption)
+                    .disabled(newItemDescription.trimmingCharacters(in: .whitespaces).isEmpty == true)
                 }
                 .padding(20)
                 
