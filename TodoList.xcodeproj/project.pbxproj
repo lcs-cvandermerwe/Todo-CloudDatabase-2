@@ -90,7 +90,6 @@
 				815D9D7C2BC413800050957E /* TodoListApp.swift */,
 				815D9D8C2BC414270050957E /* Helpers */,
 				815D9D8B2BC414160050957E /* Model */,
-				46F5B4EF2BFF7941001270B2 /* ViewModel */,
 				815D9D8A2BC413F70050957E /* Views */,
 				815D9D802BC413810050957E /* Assets.xcassets */,
 				815D9D822BC413810050957E /* Preview Content */,
@@ -114,6 +113,7 @@
 				46F5B5012C0805EB001270B2 /* AppEntryView.swift */,
 				46F5B5032C08063C001270B2 /* AuthView.swift */,
 				46F5B5052C093BC3001270B2 /* NewItemView.swift */,
+				46F5B4EF2BFF7941001270B2 /* ViewModel */,
 			);
 			path = Views;
 			sourceTree = "<group>";
