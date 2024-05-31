@@ -61,6 +61,7 @@ struct ItemView: View {
             }
         }
     }
+}
     
     #Preview {
         
@@ -71,4 +72,4 @@ struct ItemView: View {
             ItemView(currentItem: .constant(secondItem), viewModel: previewsViewModel)
         }
     }
-}
+
